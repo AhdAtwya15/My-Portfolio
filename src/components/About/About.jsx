@@ -89,7 +89,7 @@ const About = () => {
                     </div>
 
                     <div className="flex flex-col space-y-4 items-center md:items-start">
-                        <h2 className="about-name italic text-3xl md:text-4xl font-bold text-[#1EBAAB]">
+                        <h2 className="about-name pb-1 pl-1 italic text-3xl md:text-4xl font-bold bg-linear-to-r from-[#1CD8D2] via-[#00bf8f] to-[#419c9d] bg-clip-text text-transparent">
                             Ahd Atwya
                         </h2>
                         <p className="about-role text-slate-400 font-medium tracking-wide">
@@ -116,11 +116,11 @@ const About = () => {
 
                         <div className="flex flex-row gap-4 flex-wrap pt-2 items-center justify-center md:justify-start">
                             <a href="#projects"
-                                className="about-btn bg-[#2CC7CC] hover:bg-[#34979a] text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 whitespace-nowrap cursor-pointer">
+                                className="about-btn bg-[#3ac3a7] hover:bg-[#3f9b89] text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 whitespace-nowrap cursor-pointer">
                                 View Projects
                             </a>
                             <a href="#contact"
-                                className="about-btn border border-white/20 text-white px-6 py-3 rounded-full hover:border-[#2CC7CC] transition-colors duration-300 whitespace-nowrap cursor-pointer">
+                                className="about-btn border border-white/20 text-white px-6 py-3 rounded-full hover:border-[#3ac3a7] transition-colors duration-300 whitespace-nowrap cursor-pointer">
                                 Get in Touch
                             </a>
                         </div>
@@ -129,7 +129,7 @@ const About = () => {
 
                 <div className="mt-10 max-w-6xl mx-auto">
                     <h3 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                        <span className="about-line block h-0.5 w-8 bg-[#2CC7CC]"></span>
+                        <span className="about-line block h-0.5 w-8 bg-[#3ac3a7]"></span>
                         <span className="italic font-bold text-white">About Me</span>
                     </h3>
                     <p className="about-text max-w-2xl text-gray-300 text-base leading-relaxed tracking-wider">

@@ -115,7 +115,7 @@ export default function Placeholder({ onComplete }) {
     >
       <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" />
 
-      <div className="relative z-10 bg-[rgba(8,8,20,0.80)] border border-[rgba(80,220,160,0.13)] rounded-lg px-8 py-5 w-[480px]">
+      <div className="relative z-10 bg-[rgba(8,8,20,0.80)] border border-[rgba(80,220,160,0.13)] rounded-lg px-8 py-5 max-w-3xl sm:max-w-4xl md:max-w-7xl mx-auto">
         <p className="text-[#4af] text-[13px] font-mono mb-2 tracking-wide">~/workspace</p>
 
         {[0, 1, 2].map(i => (
@@ -160,7 +160,7 @@ export default function Placeholder({ onComplete }) {
 
       <div
         ref={codeRef}
-        className="relative z-10 mt-5 font-mono text-[13px] text-sky-300 px-4"
+        className="relative z-10 mt-5 font-mono text-[10px] sm:text-sm md:text-lg text-sky-300 px-4"
       >
         {CODE_LINE}
       </div>

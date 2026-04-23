@@ -43,24 +43,18 @@ const Contacts = () => {
     };
 
     return (
-        <section ref={sectionRef} id="contact" className="relative w-full min-h-screen bg-[#080810] py-24 px-6 flex items-center justify-center overflow-hidden">
+        <section ref={sectionRef} id="contact" className="relative w-full min-h-screen bg-[#080810] py-20 px-6 flex items-center justify-center overflow-hidden">
             <div className="absolute z-0 top-[-10%] left-[-10%] w-[500px] h-[500px] bg-linear-to-r from-[#135449b4] via-[#0c322b] to-[#101020] animate-pulse blur-[120px] rounded-full pointer-events-none" />
             <div className="absolute z-0 bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-linear-to-r from-[#135449b4] via-[#0c322b] to-[#101020] animate-pulse blur-[120px] rounded-full pointer-events-none" />
 
             <div className="relative z-10 max-w-6xl w-full grid lg:grid-cols-2 gap-16 items-center">
                 <div ref={leftRef} className="flex flex-col items-start gap-8">
-                    <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-teal-500/20 bg-teal-500/5 backdrop-blur-sm">
-                        <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
-                        </span>
-                        <span className="text-[10px] sm:text-xs font-bold tracking-widest text-teal-400 uppercase">Available for work</span>
-                    </div>
+                    
 
                     <h2 className="text-6xl sm:text-7xl md:text-8xl font-black text-white leading-[1.1] tracking-tighter">
-                        Get<br />
-                        in <span className="bg-linear-to-r from-[#1CD8D2] via-[#00bf8f] to-[#302b63] text-transparent bg-clip-text underline decoration-teal-500/30 underline-offset-8">touch</span><br />
-                        with me.
+                        Let’s build   <br />
+                        something <span className="bg-linear-to-r from-[#1CD8D2] via-[#00bf8f] to-[#302b63] text-transparent bg-clip-text underline decoration-teal-500/30 underline-offset-8">together</span><br />
+                       
                     </h2>
                     <div className="flex items-center gap-4 w-full">
                         <div className="h-px flex-1 bg-linear-to-r from-teal-500/40 to-transparent" />
@@ -156,12 +150,7 @@ const Contacts = () => {
                 </div>
             </div>
 
-            <button
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="absolute bottom-10 right-10 w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:bg-white hover:text-black transition-all duration-500 z-50 shadow-2xl"
-            >
-                <FiArrowUpRight className="-rotate-45" size={20} />
-            </button>
+            
         </section>
     );
 };

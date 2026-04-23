@@ -122,7 +122,7 @@ const Heros = ({ isReady }) => {
 
                     <h1 className="font-mono text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">
                         <span className="inline-flex gap-2">
-                            <span className="hello-word bg-linear-to-r from-teal-400/90 via-teal-400/90 to-teal-400/80 bg-clip-text text-transparent">Hello</span>
+                            <span className="hello-word bg-linear-to-r from-teal-400/90 via-teal-400/90 to-teal-400/80 bg-clip-text text-transparent">Hey</span>
                             <span className="hello-word bg-linear-to-r from-teal-300/90 via-teal-300/90 to-teal-300/80 bg-clip-text text-transparent">,</span>
                             <span className="hello-word bg-linear-to-r from-teal-300/90 via-teal-300/80 to-teal-300/70 bg-clip-text text-transparent">I'm</span>
                         </span>
@@ -131,18 +131,19 @@ const Heros = ({ isReady }) => {
                     </h1>
 
                     <p ref={subRef} className="text-gray-300 text-base sm:text-lg max-w-md -tracking-tight">
-                        I create engaging, high-performance web experiences that blend clean code with intuitive design.
+                        Crafting modern interfaces with smooth interactions and clean code.
                     </p>
 
                     <div className="flex gap-4 flex-wrap mt-3 justify-center md:justify-start">
                         <a
                             href="#projects"
-                            className="hero-cta inline-block bg-linear-to-r from-[#1CD8D2] via-[#00bf8f] to-[#302b63] hover:from-[#2DA696] hover:via-[#1FAF98] hover:to-[#1FAF98] hover:scale-105 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 cursor-pointer"
+                            className="hero-cta inline-block bg-linear-to-r  from-[#1CD8D2] via-[#00bf8f] to-[#302b63] hover:from-[#2DA696] hover:via-[#1FAF98] hover:to-[#1FAF98] hover:scale-105 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 cursor-pointer"
                         >
                             View My Work
                         </a>
                         <a
-                            href="#"
+                            href="https://drive.google.com/file/d/1H-A_up-SokLHs_ROo_QylK1lMyvxo3zt/view?usp=drive_link"
+                            target="_blank"
                             className="hero-cta inline-block border border-white/30 text-white px-6 py-3 rounded-full hover:border-white hover:scale-105 transition-all duration-300 cursor-pointer"
                         >
                             My Resume

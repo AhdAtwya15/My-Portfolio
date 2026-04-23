@@ -2,6 +2,7 @@ import { lazy, Suspense, useState } from 'react'
 import Navbar from './components/Navbar'
 import Placeholder from './components/Placeholder/Placeholder'
 import Heros from './components/Home/Heros'
+import ScrollToTop from './components/ScrollToTop'
 const About      = lazy(() => import('./components/About/About'))
 const MySkills   = lazy(() => import('./components/MySkills/MySkills'))
 const Projects   = lazy(() => import('./components/Projects/Projects'))
@@ -27,6 +28,7 @@ function App() {
           <Footer />
         </Suspense>
       </div>
+     <ScrollToTop />
     </>
   )
 }

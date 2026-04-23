@@ -34,7 +34,7 @@ const MySkills = () => {
   const [cardSize, setCardSize]     = useState(getCardSize)
   const [hasStarted, setHasStarted] = useState(false)
 
-  // ─── Resize listener (dep array is [] — uses ref to avoid stale closure) ──
+  
   useEffect(() => {
     const handleWindowResize = () => {
       const newSize = getCardSize()
@@ -42,19 +42,19 @@ const MySkills = () => {
     }
     window.addEventListener("resize", handleWindowResize)
     return () => window.removeEventListener("resize", handleWindowResize)
-  }, [])  // ← fixed: was [cardSize] causing listener re-registration on every resize
+  }, [])  
 
-  // ─── IntersectionObserver — only start physics when section is visible ─────
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => { if (entry.isIntersecting) setHasStarted(true) },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     )
     if (containerRef.current) observer.observe(containerRef.current)
     return () => observer.disconnect()
   }, [])
 
-  // ─── Physics engine ───────────────────────────────────────────────────────
+
   useEffect(() => {
     let mounted = true
     if (!hasStarted) return
@@ -76,7 +76,7 @@ const MySkills = () => {
     if (onResize) window.removeEventListener("resize", onResize)
     if (!engine) return
     const { Runner, World, Engine } = Matter
-    // ✅ No Render to stop — we removed the hidden canvas entirely
+   
     if (runner) Runner.stop(runner)
     World.clear(engine.world)
     Engine.clear(engine)
@@ -90,9 +90,7 @@ const MySkills = () => {
     const W  = el.offsetWidth
     const H  = el.offsetHeight
     const S  = getCardSize()
-
-    // ✅ Engine only — NO Render.create(). The hidden opacity:0 canvas was
-    //    burning GPU draw calls for zero visual output. Removed entirely.
+   
     const engine = Engine.create({ gravity: { y: 1.2 } })
     matterRefs.current.engine = engine
 
@@ -140,7 +138,6 @@ const MySkills = () => {
     el.addEventListener("mousedown", () => { el.style.cursor = "grabbing" })
     el.addEventListener("mouseup",   () => { el.style.cursor = "grab" })
 
-    // Sync DOM card positions from physics bodies on every engine step
     Events.on(engine, "afterUpdate", () => {
       bodies.forEach((body, i) => {
         const div = cardRefs.current[i]
@@ -151,12 +148,9 @@ const MySkills = () => {
       })
     })
 
-    // Runner drives the engine (replaces Render.run which we removed)
     const runner = Runner.create()
     Runner.run(runner, engine)
     matterRefs.current.runner = runner
-
-    // Resize: update wall positions without re-creating the engine
     const onResize = () => {
       if (!containerRef.current) return
       const nW = containerRef.current.offsetWidth
@@ -191,7 +185,6 @@ const MySkills = () => {
         className="relative z-10 w-full overflow-hidden max-w-3xl sm:max-w-4xl lg:max-w-6xl mx-auto border-b border-[#43b1b4]"
         style={{ height: "50vh", minHeight: 400 }}
       >
-        {/* ✅ canvasWrapRef div removed — hidden Matter Render canvas is gone */}
 
         {SKILLS.map((skill, i) => {
           const { Icon } = skill
