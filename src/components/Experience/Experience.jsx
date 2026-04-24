@@ -2,23 +2,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 import { EXPERIENCES } from "../../data/data";
+import Card from "./Card";
 
-const Card = ({ exp }) => (
-    <div className={`w-[85%] md:w-[45%] rounded-2xl border border-teal-500/20 bg-teal-950/30 p-4 sm:p-6 backdrop-blur-sm
-    ${exp.left ? "ml-auto md:mr-auto md:ml-0" : "ml-auto"}`}
-    >
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-3 mb-3">
-            <div>
-                <h3 className="font-bold text-white text-base sm:text-lg">{exp.title}</h3>
-                <p className="text-xs sm:text-sm text-teal-400/70 mt-0.5">{exp.company}</p>
-            </div>
-            <span className="shrink-0 text-[10px] sm:text-xs text-teal-400 border border-teal-500/30 bg-teal-500/10 rounded-full px-2 py-1">
-                {exp.period}
-            </span>
-        </div>
-        <p className="text-xs sm:text-sm text-white/50 leading-relaxed">{exp.description}</p>
-    </div>
-);
 
 const Experience = () => {
     const sectionRef = useRef(null);
@@ -63,7 +48,7 @@ const Experience = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} id="experience" className="relative w-full min-h-screen bg-[#080810] overflow-hidden py-16 sm:py-20">
+        <section ref={sectionRef} id="experience" className="relative w-full min-h-screen bg-black overflow-hidden py-16 sm:py-20">
             <div className="absolute z-0 top-[-10%] left-[-10%] w-[500px] h-[500px] bg-linear-to-r from-[#135449b4] via-[#0c322b] to-[#101020] animate-pulse blur-[120px] rounded-full pointer-events-none" />
             <div className="absolute z-0 bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-linear-to-r from-[#135449b4] via-[#0c322b] to-[#101020] animate-pulse blur-[120px] rounded-full pointer-events-none" />
             <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">

@@ -13,15 +13,17 @@ const Projects = () => {
         const ctx = gsap.context(() => {
             const track = trackRef.current
             const cards = gsap.utils.toArray(".project-card")
-            const totalW = track.scrollWidth - window.innerWidth
+            const getScrollAmount = () => track.scrollWidth - window.innerWidth;
+            
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: sectionRef.current,
                     start: "top top",
-                    end: () => `+=${totalW + window.innerWidth}`,
+                    end: () => `+=${getScrollAmount()}`,
                     pin: true,
                     scrub: 1,
                     anticipatePin: 1,
+                    invalidateOnRefresh: true,
                     onUpdate: (self) => {
                         const progress = self.progress;
                         
@@ -40,7 +42,7 @@ const Projects = () => {
             })
 
             tl.to(track, {
-                x: -totalW,
+                x: () => -getScrollAmount(),
                 ease: "none",
             })
  
@@ -181,7 +183,7 @@ const Projects = () => {
                     </div>
                 ))}
             </div>
-            <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 p-3 rounded-full bg-black/40 backdrop-blur-lg border border-white/10 shadow-2xl">
+            <div className="absolute bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 p-3 rounded-full bg-black/40 backdrop-blur-lg border border-white/10 shadow-2xl">
                 {PROJECTS.map((p, i) => (
                     <div
                         key={i}

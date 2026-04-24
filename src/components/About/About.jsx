@@ -96,7 +96,7 @@ const About = () => {
                             Frontend Developer
                         </p>
                         <p className="about-bio text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl text-center md:text-left">
-                            Computer Science graduate (2025) with a strong passion for frontend development.
+                            Computer Science graduate with a strong passion for frontend development.
                             I focus on building clean, responsive, and visually engaging web interfaces
                             that turn complex ideas into simple user experiences.
                         </p>
@@ -107,9 +107,9 @@ const About = () => {
                                 { label: "GPA",        value: "3.4 / 4.0" },
                                 { label: "Focus",      value: "Frontend" },
                             ].map((s) => (
-                                <div key={s.label} className="stat-card bg-white/5 border border-white/10 rounded-xl p-3 text-center">
+                                <div key={s.label} className="stat-card flex flex-col items-center bg-white/5 border border-white/10 rounded-xl p-3 text-center">
                                     <p className="text-xs text-slate-400 mb-1">{s.label}</p>
-                                    <p className="text-sm font-bold text-white">{s.value}</p>
+                                    <p className="text-xs sm:text-sm font-bold text-white">{s.value}</p>
                                 </div>
                             ))}
                         </div>
