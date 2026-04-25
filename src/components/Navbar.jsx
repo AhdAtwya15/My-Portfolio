@@ -120,7 +120,7 @@ const Navbar = () => {
             </div>
           ))}
         </div>
-        <button onClick={closeMenu} className="cursor-pointer absolute top-8 right-10 z-[9999]">
+        <button onClick={closeMenu} className="cursor-pointer absolute top-8 right-10 z-9999">
           <IoCloseOutline className="w-7 h-7 text-white hover:text-slate-400 transition-colors duration-300" />
         </button>
       </div>
