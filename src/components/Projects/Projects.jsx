@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -19,10 +20,13 @@ const Projects = () => {
                 scrollTrigger: {
                     trigger: sectionRef.current,
                     start: "top top",
-                    end: () => `+=${getScrollAmount()}`,
-                    pin: true,
-                    scrub: 1,
-                    anticipatePin: 1,
+                    end: "bottom bottom", // Scrolls exactly the height of the section
+                    scrub: 0.2, // Faster, less "heavy" feeling than 1
+                    snap: {
+                        snapTo: 1 / (PROJECTS.length - 1),
+                        duration: 0.3,
+                        ease: "power1.inOut"
+                    },
                     invalidateOnRefresh: true,
                     onUpdate: (self) => {
                         const progress = self.progress;
@@ -96,8 +100,10 @@ const Projects = () => {
         <section
             ref={sectionRef}
             id="projects"
-            className="relative w-full min-h-screen  overflow-hidden bg-[#080810]  "
+            className="relative w-full bg-[#080810]"
+            style={{ height: `${PROJECTS.length * 100}vh` }} // Creates scrolling space
         >
+            <div className="sticky top-0 left-0 w-full h-[100dvh] overflow-hidden">
             <div className="absolute top-4 sm:top-10 left-1/2 -translate-x-1/2 z-50 text-center pointer-events-none mt-4 sm:mt-0">
                 <h2 className="text-xl sm:text-3xl lg:text-5xl font-black  bg-linear-to-r from-[#1CD8D2] via-[#00bf8f] to-[#302b63] text-transparent bg-clip-text drop-shadow-[0_0_20px_rgba(44,199,204,0.3)]">
                     Selected Works
@@ -110,11 +116,9 @@ const Projects = () => {
                     <div className="w-8 sm:w-12 h-px bg-white/20 hidden sm:block"></div>
                 </div>
             </div>
-            <div>
-            </div>
             <div
                 ref={trackRef}
-                className=" absolute top-0 left-0 h-full flex items-center shadow-[40px_0_100px_rgba(0,0,0,0.8)]"
+                className="absolute top-0 left-0 h-full flex items-center shadow-[40px_0_100px_rgba(0,0,0,0.8)]"
                 style={{ width: `${PROJECTS.length * 100}vw` }}
             >
                 {PROJECTS.map((p, i) => (
@@ -197,9 +201,29 @@ const Projects = () => {
                     />
                 ))}
             </div>
-
+            </div>
         </section>
     )
 }
 
 export default Projects
+
+// import { useState, useEffect } from "react"
+// import ProjectsDesktop from "./ProjectsDesktop"
+// import ProjectsMobile from "./ProjectsMobile"
+
+// const Projects = () => {
+//     const [isMobile, setIsMobile] = useState(
+//         () => window.innerWidth < 1024
+//     )
+
+//     useEffect(() => {
+//         const handler = () => setIsMobile(window.innerWidth < 1024)
+//         window.addEventListener("resize", handler)
+//         return () => window.removeEventListener("resize", handler)
+//     }, [])
+
+//     return isMobile ? <ProjectsMobile /> : <ProjectsDesktop />
+// }
+
+// export default Projects
