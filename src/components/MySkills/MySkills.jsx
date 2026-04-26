@@ -174,7 +174,7 @@ const MySkills = () => {
                       animate-pulse blur-[120px] rounded-full pointer-events-none" />
 
       <div className="px-6 sm:px-10 mx-auto flex flex-col gap-3 items-center justify-center relative z-10">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl pb-4 font-bold bg-linear-to-r from-[#1CD8D2] via-[#00bf8f] to-[#302b63] text-transparent bg-clip-text">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl pb-4 font-black bg-linear-to-r from-[#1CD8D2] via-[#00bf8f] to-[#302b63] text-transparent bg-clip-text">
           My Skills
         </h2>
         <p className="text-gray-400 text-center">Drag, throw, and watch them bounce. Nothing escapes!</p>

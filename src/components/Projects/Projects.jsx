@@ -8,6 +8,7 @@ const Projects = () => {
     const trackRef = useRef(null)
     const headerRef = useRef(null)
     const dotsRef = useRef([])
+    const dotsContainerRef = useRef(null)
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -64,6 +65,14 @@ const Projects = () => {
                                 gsap.to(dot, { width: 10, backgroundColor: "rgba(255,255,255,0.2)", duration: 0.3 })
                             }
                         })
+
+                        if (dotsContainerRef.current) {
+                            if (progress > 0.98) {
+                                gsap.to(dotsContainerRef.current, { opacity: 0, y: 20, duration: 0.3, ease: "power2.out", overwrite: "auto" })
+                            } else {
+                                gsap.to(dotsContainerRef.current, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out", overwrite: "auto" })
+                            }
+                        }
                     },
                 },
             })
@@ -115,7 +124,10 @@ const Projects = () => {
                     ))}
                 </div>
 
-                <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 sm:gap-3 p-2.5 sm:p-3 rounded-full bg-black/40 backdrop-blur-lg border border-white/10 shadow-2xl">
+                <div 
+                    ref={dotsContainerRef}
+                    className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 sm:gap-3 p-2.5 sm:p-3 rounded-full bg-black/40 backdrop-blur-lg border border-white/10 shadow-2xl"
+                >
                     {PROJECTS.map((p, i) => (
                         <div
                             key={p.id}
