@@ -97,7 +97,7 @@ const Heros = ({ isReady }) => {
     return (
         <section
             id="home"
-            className="relative min-h-screen overflow-hidden pt-40 md:pt-30 lg:pt-20"
+            className="relative min-h-screen md:min-h-[80vh] lg:min-h-screen overflow-hidden pt-40 md:pt-30 lg:pt-20"
             style={{
                 background: `
                     radial-gradient(ellipse at 75% 50%, #135449b4 0%, transparent 60%),

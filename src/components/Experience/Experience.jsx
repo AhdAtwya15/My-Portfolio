@@ -52,7 +52,7 @@ const Experience = () => {
             <div className="absolute z-0 top-[-10%] left-[-10%] w-[500px] h-[500px] bg-linear-to-r from-[#135449b4] via-[#0c322b] to-[#101020] animate-pulse blur-[120px] rounded-full pointer-events-none" />
             <div className="absolute z-0 bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-linear-to-r from-[#135449b4] via-[#0c322b] to-[#101020] animate-pulse blur-[120px] rounded-full pointer-events-none" />
             <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
-                <h2 className="text-3xl sm:text-5xl font-bold w-fit mx-auto mb-10 pb-4 sm:pb-10 bg-linear-to-r from-[#1CD8D2] via-[#00bf8f] to-[#302b63] text-transparent bg-clip-text">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black w-fit mx-auto mb-10 pb-4 sm:pb-10 bg-linear-to-r from-[#1CD8D2] via-[#00bf8f] to-[#302b63] text-transparent bg-clip-text">
                     Experience
                 </h2>
                 <div className="relative">

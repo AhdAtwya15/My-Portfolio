@@ -51,7 +51,7 @@ const Contacts = () => {
                 <div ref={leftRef} className="flex flex-col items-start gap-8">
                     
 
-                    <h2 className="text-6xl sm:text-7xl md:text-8xl font-black text-white leading-[1.1] tracking-tighter">
+                    <h2 className="text-4xl sm:text-5xl md:text-8xl font-black text-white leading-[1.1] tracking-tighter">
                         Let’s build   <br />
                         something <span className="bg-linear-to-r from-[#1CD8D2] via-[#00bf8f] to-[#302b63] text-transparent bg-clip-text underline decoration-teal-500/30 underline-offset-8">together</span><br />
                        

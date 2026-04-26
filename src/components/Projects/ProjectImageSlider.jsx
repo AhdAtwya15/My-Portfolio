@@ -74,3 +74,4 @@ const ProjectImageSlider = ({ images, accent, title }) => {
     )
 }
 export default ProjectImageSlider
+

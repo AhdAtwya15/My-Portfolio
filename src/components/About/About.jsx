@@ -70,7 +70,7 @@ const About = () => {
     }, [])
 
     return (
-        <section ref={sectionRef} id="about" className="relative min-h-screen py-20 px-6 sm:px-10 lg:px-13 overflow-hidden">
+        <section ref={sectionRef} id="about" className="relative  min-h-screen md:min-h-[80vh] lg:min-h-screen py-20 px-6 sm:px-10 lg:px-13 overflow-hidden">
 
             <div className="absolute z-0 top-[-10%] left-[-10%] w-[500px] h-[500px] bg-linear-to-r from-[#135449b4] via-[#0c322b] to-[#101020] animate-pulse blur-[120px] rounded-full pointer-events-none" />
             <div className="absolute z-0 bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-linear-to-r from-[#135449b4] via-[#0c322b] to-[#101020] animate-pulse blur-[120px] rounded-full pointer-events-none" />
