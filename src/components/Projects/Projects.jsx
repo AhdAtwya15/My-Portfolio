@@ -82,7 +82,7 @@ const Projects = () => {
     }, [])
 
     return (
-        <div ref={wrapperRef} className="relative w-full ">
+        <section id="projects" ref={wrapperRef} className="relative w-full ">
             <div className="relative w-full h-dvh overflow-hidden">
                 
                 <div
@@ -142,7 +142,7 @@ const Projects = () => {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 export default Projects
