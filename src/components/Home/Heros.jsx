@@ -100,7 +100,7 @@ const Heros = ({ isReady }) => {
             className="relative min-h-screen md:min-h-[80vh] lg:min-h-screen overflow-hidden pt-40 md:pt-30 lg:pt-20"
             style={{
                 background: `
-                    radial-gradient(ellipse at 75% 50%, #135449b4 0%, transparent 60%),
+                    radial-gradient(ellipse at 75% 50%, #2da69638 0%, transparent 60%),
                     black
                 `,
             }}
@@ -108,11 +108,11 @@ const Heros = ({ isReady }) => {
             <Stars />
 
             <div
-                className="absolute z-0 top-[-10%] left-[-10%] w-[500px] h-[500px] bg-linear-to-r from-[#135449b4] via-[#0c322b] to-[#101020] animate-pulse blur-[120px] rounded-full pointer-events-none"
+                className="absolute z-0 top-[-10%] left-[-10%] w-125 h-125 bg-linear-to-r from-teal-500/40 via-teal-400/25 to-teal-300/10 animate-pulse blur-[120px] rounded-full pointer-events-none"
                 style={{ willChange: 'transform' }}
             />
 
-            <div className='relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-[1310px] mx-auto px-8 sm:px-10 lg:px-13'>
+            <div className='relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-327.5 mx-auto px-8 sm:px-10 lg:px-13'>
 
                 <div className="flex flex-col gap-5 lg:gap-4 mx-auto md:mx-0 text-center md:text-left pt-15">
                     <p className="text-white text-xl tracking-widest uppercase flex items-center gap-0 justify-center md:justify-start">
@@ -151,7 +151,7 @@ const Heros = ({ isReady }) => {
                     </div>
                 </div>
 
-                <div className="hidden md:flex mb-10 items-center justify-center h-full w-full max-w-[600px]">
+                <div className="hidden md:flex mb-10 items-center justify-center h-full w-full max-w-150">
                     <LazyLottie />
                 </div>
             </div>

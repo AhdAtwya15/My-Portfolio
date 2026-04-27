@@ -44,8 +44,8 @@ const Contacts = () => {
 
     return (
         <section ref={sectionRef} id="contact" className="relative w-full min-h-screen bg-[#080810] py-20 px-6 flex items-center justify-center overflow-hidden">
-            <div className="absolute z-0 top-[-10%] left-[-10%] w-[500px] h-[500px] bg-linear-to-r from-[#135449b4] via-[#0c322b] to-[#101020] animate-pulse blur-[120px] rounded-full pointer-events-none" />
-            <div className="absolute z-0 bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-linear-to-r from-[#135449b4] via-[#0c322b] to-[#101020] animate-pulse blur-[120px] rounded-full pointer-events-none" />
+            <div className="absolute z-0 top-[-10%] left-[-10%] w-125 h-125 bg-linear-to-r from-teal-500/40 via-teal-400/25 to-teal-300/10 animate-pulse blur-[120px] rounded-full pointer-events-none" />
+            <div className="absolute z-0 bottom-[-10%] right-[-10%] w-125 h-125 bg-linear-to-r from-teal-500/40 via-teal-400/25 to-teal-300/10 animate-pulse blur-[120px] rounded-full pointer-events-none" />
 
             <div className="relative z-10 max-w-6xl w-full grid lg:grid-cols-2 gap-16 items-center">
                 <div ref={leftRef} className="flex flex-col items-start gap-8">

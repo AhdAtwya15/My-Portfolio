@@ -59,18 +59,7 @@ const MySkills = () => {
     let mounted = true
     if (!hasStarted) return
 
-    const timer = setTimeout(() => {
-      if (!mounted || !containerRef.current) return
-      initMatter()
-    }, 120)
-
-    return () => {
-      mounted = false
-      clearTimeout(timer)
-      cleanup()
-    }
-  }, [cardSize, hasStarted])
-
+   
   const cleanup = () => {
     const { runner, engine, onResize } = matterRefs.current
     if (onResize) window.removeEventListener("resize", onResize)
@@ -163,14 +152,26 @@ const MySkills = () => {
     window.addEventListener("resize", onResize)
     matterRefs.current.onResize = onResize
   }
+   const timer = setTimeout(() => {
+      if (!mounted || !containerRef.current) return
+      initMatter()
+    }, 120)
+
+    return () => {
+      mounted = false
+      clearTimeout(timer)
+      cleanup()
+    }
+  }, [cardSize, hasStarted])
+
 
   return (
     <section id="skills" className="relative bg-black overflow-hidden py-20">
-      <div className="absolute z-0 top-[-10%] left-[-10%] w-[500px] h-[500px]
-                      bg-linear-to-r from-[#135449b4] via-[#0c322b] to-[#101020]
+      <div className="absolute z-0 top-[-10%] left-[-10%] w-125 h-125
+                      bg-linear-to-r from-teal-500/40 via-teal-400/25 to-teal-300/10
                       animate-pulse blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute z-0 bottom-[-10%] right-[-10%] w-[500px] h-[500px]
-                      bg-linear-to-r from-[#135449b4] via-[#0c322b] to-[#101020]
+      <div className="absolute z-0 bottom-[-10%] right-[-10%] w-125 h-125
+                      bg-linear-to-r from-teal-500/40 via-teal-400/25 to-teal-300/10
                       animate-pulse blur-[120px] rounded-full pointer-events-none" />
 
       <div className="px-6 sm:px-10 mx-auto flex flex-col gap-3 items-center justify-center relative z-10">
