@@ -81,9 +81,9 @@ const About = () => {
 
                     <div className="about-img relative w-40 h-40 sm:w-50 sm:h-50 md:w-70 md:h-70 rounded-full mx-auto overflow-hidden ring-2 ring-[#2CC7CC]/30 bg-[#0f1f1e]">
                         <img
-                            src="https://res.cloudinary.com/df2nbeovz/image/upload/v1776969756/Me_v3uhwn.png"
+                            src="https://res.cloudinary.com/df2nbeovz/image/upload/v1778418294/mostaql3_dpzmaf.jpg"
                             alt="Ahd Atwya"
-                            className="w-full h-auto object-cover"
+                            className="w-full h-auto object-center"
                             loading="lazy"
                         />
                     </div>
